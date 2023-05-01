@@ -1,0 +1,74 @@
+
+:root {
+    --background: #e3e7ec;
+
+    --btn-orange: #f5a370;
+
+    --light-txt: #eaeaea;
+    --dark-txt: #2a2a2a;
+
+    --size-heading: 64px;
+    --size-button: 26px;
+    --size-info: 22px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Elements*/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px 0;
+    background: var(--background);
+    color: var(--dark-txt);
+    font-family: Lato, sans-serif;
+}
+
+button {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 25%;
+    background-color: var(--btn-orange);
+    color: var(--light-txt);
+    font-size: var(--size-button);
+    font-weight: 700;
+    box-shadow: 0 0 2px 1px rgba(196, 196, 196, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-2%);
+}
+
+button:active {
+    transform: translateY(4%);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--dark-txt);
+
+}
+
+/*Classes*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
