@@ -74,8 +74,6 @@ a {
 .right, .backImg {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: stretch;
 }
 
 .backImg {
@@ -84,6 +82,9 @@ a {
     background-size: auto;
     background-repeat: no-repeat;
     height: 100vh;
+
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .title, .imgAttribution {
@@ -120,6 +121,10 @@ a {
 
 .right {
     width: 60vw;
+}
+
+.loginText a {
+    color: var(--dark-txt);
 }
 
 .footer {
