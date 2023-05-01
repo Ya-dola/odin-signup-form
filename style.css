@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap');
 
 :root {
     --background: #e3e7ec;
@@ -7,7 +8,8 @@
     --light-txt: #eaeaea;
     --dark-txt: #2a2a2a;
 
-    --size-heading: 64px;
+    --size-heading: 5vmax;
+    --size-text: 1.12vmax;
     --size-button: 26px;
     --size-info: 22px;
 }
@@ -24,15 +26,13 @@
 
 body {
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 20px;
-    padding: 20px 0;
+    flex-flow: row wrap;
     background: var(--background);
     color: var(--dark-txt);
     font-family: Lato, sans-serif;
+    font-size: var(--size-text);
 }
 
 button {
@@ -42,7 +42,7 @@ button {
     text-decoration: none;
     border: none;
     outline: none;
-    border-radius: 25%;
+    border-radius: 5%;
     background-color: var(--btn-orange);
     color: var(--light-txt);
     font-size: var(--size-button);
@@ -61,11 +61,66 @@ button:active {
 
 a {
     text-decoration: underline;
-    color: var(--dark-txt);
-
+    color: var(--light-txt);
 }
 
 /*Classes*/
+
+.left {
+    width: 40vw;
+    color: var(--light-txt);;
+}
+
+.right, .backImg {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.backImg {
+    background-image: url(./fachry-zella-devandra-Yta-zdP9PVM-unsplash.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.title, .imgAttribution {
+    background-color: rgba(17, 17, 17, 0.6);
+}
+
+.title {
+    height: auto;
+    position: relative;
+    top: -30vh;
+    gap: 2vw;
+    padding: 12px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleLogo {
+    height: 10vh;
+}
+
+.titleText {
+    font-family: 'Oooh Baby', cursive;
+    font-size: var(--size-heading);
+}
+
+.imgAttribution {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 4px;
+}
+
+.right {
+    width: 60vw;
+}
 
 .footer {
     display: flex;
