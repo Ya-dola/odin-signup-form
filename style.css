@@ -1,19 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Oooh+Baby&family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Contrail+One&family=Knewave&family=Oooh+Baby&family=Vujahday+Script&display=swap');
 
 :root {
     --background: #e3e7ec;
 
-    --btn-orange: #f5a370;
+    --btn-orange: #ff9272;
 
     --light-txt: #eaeaea;
     --dark-txt: #2a2a2a;
+    --btn-txt: #3d3d3d;
+    --error-txt: #ff5454;
 
     --size-heading: 5vmax;
     --size-footers: 1.1125vmax;
-    --size-button: 1.25vmax;
+    --size-button: 1.4vmax;
 
     --size-form-intro: 1.6vmin;
     --size-form-cta: 3vmin;
+    --size-form-heading: 2.4vmin;
+    --size-form-input: 1.125vmin;
+    --size-form-login-txt: 1.65vmin;
+    --size-form-login-a: 2.4vmin;
 }
 
 *,
@@ -37,23 +43,24 @@ body {
 }
 
 button {
-    width: 12vw;
-    height: 4vh;
+    width: 14vw;
+    height: 5vh;
     cursor: pointer;
     text-decoration: none;
     border: none;
     outline: none;
     border-radius: 0.5rem;
     background-color: var(--btn-orange);
-    color: var(--dark-txt);
+    color: var(--btn-txt);
     font-size: var(--size-button);
+    font-family: 'Carter One', cursive;
     font-weight: 700;
-    box-shadow: 0 0 2px 1px rgba(196, 196, 196, 0.2);
+    box-shadow: 0 2px 6px 1px rgba(107, 107, 107, 0.6);
     transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-    transform: translateY(-2%);
+    transform: translateY(-6%);
 }
 
 button:active {
@@ -97,7 +104,7 @@ a {
     position: relative;
     top: -30vh;
     gap: 2vw;
-    padding: 12px 0;
+    padding: 1.2vh 0;
 
     display: flex;
     justify-content: center;
@@ -149,8 +156,8 @@ a {
 
 .formIntro .info {
     font-size: var(--size-form-intro);
-    font-weight: 900;
     font-family: 'Carter One', cursive;
+    font-weight: 900;
 }
 
 .formIntro .cta {
@@ -161,8 +168,70 @@ a {
     margin-top: 2vh;
 }
 
-.formBody {
+.formHeading {
+    font-family: 'Knewave', cursive;
+    font-size: var(--size-form-heading);
+    color: var(--dark-txt);
+}
 
+.formBody {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2vw;
+    padding: 2vh 0;
+}
+
+.inputDiv {
+    position: relative;
+    width: 40%;
+}
+
+.inputDiv input {
+    width: 100%;
+    padding: 0.75vh 0;
+    font-size: var(--size-form-input);
+    border: none;
+    border-bottom: 1px solid var(--dark-txt);
+    outline: none;
+    background: transparent;
+}
+
+.inputDiv label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.75vh 0;
+    color: var(--dark-txt);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/*To Show Invalid Inputs*/
+.inputDiv input:not(:placeholder-shown) ~ label {
+    top: -1.6vh;
+    left: 0;
+    color: var(--error-txt);
+}
+
+/*Lower CSS Takes Priority over Top CSS to allow for valid inputs*/
+.inputDiv input:focus ~ label,
+.inputDiv input:valid ~ label {
+    top: -1.6vh;
+    left: 0;
+    color: var(--dark-txt);
+}
+
+
+.loginText {
+    font-family: 'Contrail One', cursive;
+    font-size: var(--size-form-login-txt);
+    padding: 1.5vh 0;
+}
+
+.loginText a {
+    font-family: 'Vujahday Script', cursive;
+    font-size: var(--size-form-login-a);
+    font-weight: 700;
 }
 
 .footer {
