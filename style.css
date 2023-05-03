@@ -148,10 +148,6 @@ a {
     padding-right: 0.5vw;
 }
 
-.loginText a {
-    color: var(--dark-txt);
-}
-
 .formIntro {
     margin-top: 8vh;
 }
@@ -215,7 +211,12 @@ a {
 .inputDiv input:valid ~ label {
     top: -1.6vmax;
     left: 0;
-    color: var(--dark-txt);
+}
+
+.inputDiv label.labelError {
+    top: -1.6vmax;
+    left: 0;
+    color: var(--error-txt);
 }
 
 .inputDiv .inputError {
@@ -233,6 +234,7 @@ a {
 }
 
 .loginText a {
+    color: var(--dark-txt);
     font-family: 'Vujahday Script', cursive;
     font-size: var(--size-form-login-a);
     font-weight: 700;
@@ -245,4 +247,8 @@ a {
 
     margin-top: 16vh;
     background-color: rgba(253, 154, 100, 0.6);
+}
+
+.footer a {
+    color: var(--dark-txt);
 }

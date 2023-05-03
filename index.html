@@ -40,7 +40,7 @@
                     <div class="inputDiv">
                         <input type="text" name="first-name" id="first-name" required>
                         <label for="first-name">First Name</label>
-                        <div class="inputError" id="first-name-error">Please Type First Name</div>
+                        <div class="inputError" id="first-name-error"></div>
                     </div>
                     <div class="inputDiv">
                         <input type="text" name="last-name" id="last-name" required>
@@ -53,18 +53,20 @@
                         <div class="inputError" id="email-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="number" name="phone-num" id="phone-num"
-                               minlength="9" required>
+                        <input type="tel" name="phone-num" id="phone-num"
+                               pattern="[0-9]{10}" required>
                         <label for="phone-num">Phone Number</label>
                         <div class="inputError" id="phone-num-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="password" name="pass" id="pass" required>
+                        <input type="password" name="pass" id="pass"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                         <label for="pass">Password</label>
                         <div class="inputError" id="pass-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="password" name="conf-pass" id="conf-pass" required>
+                        <input type="password" name="conf-pass" id="conf-pass"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                         <label for="conf-pass">Confirm Password</label>
                         <div class="inputError" id="conf-pass-error"></div>
                     </div>
@@ -79,7 +81,8 @@
             </form>
             <div class="footer">
                 <div>
-                    Copyright &copy; The Odin Project - Aadil Edition
+                    Copyright &copy; The Odin Project -
+                    <a href="https://github.com/Ya-dola">Aadil Edition</a>
                 </div>
             </div>
         </div>
