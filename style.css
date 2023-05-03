@@ -16,10 +16,11 @@
 
     --size-form-intro: 1.6vmin;
     --size-form-cta: 3vmin;
-    --size-form-heading: 2.4vmin;
-    --size-form-input: 1.125vmin;
-    --size-form-login-txt: 1.65vmin;
-    --size-form-login-a: 2.4vmin;
+    --size-form-heading: 2vmax;
+    --size-form-input: 1.4vmax;
+    --size-form-label: 1.025vmax;
+    --size-form-login-txt: 1.35vmax;
+    --size-form-login-a: 2vmax;
 }
 
 *,
@@ -151,7 +152,7 @@ a {
 }
 
 .formIntro {
-    margin-top: 10vh;
+    margin-top: 8vh;
 }
 
 .formIntro .info {
@@ -172,6 +173,7 @@ a {
     font-family: 'Knewave', cursive;
     font-size: var(--size-form-heading);
     color: var(--dark-txt);
+    padding: 2vh 0;
 }
 
 .formBody {
@@ -201,6 +203,7 @@ a {
     top: 0;
     left: 0;
     padding: 0.75vh 0;
+    font-size: var(--size-form-label);
     color: var(--dark-txt);
     pointer-events: none;
     transition: all 0.3s ease-in-out;
@@ -208,7 +211,7 @@ a {
 
 /*To Show Invalid Inputs*/
 .inputDiv input:not(:placeholder-shown) ~ label {
-    top: -1.6vh;
+    top: -1.6vmax;
     left: 0;
     color: var(--error-txt);
 }
@@ -216,11 +219,10 @@ a {
 /*Lower CSS Takes Priority over Top CSS to allow for valid inputs*/
 .inputDiv input:focus ~ label,
 .inputDiv input:valid ~ label {
-    top: -1.6vh;
+    top: -1.6vmax;
     left: 0;
     color: var(--dark-txt);
 }
-
 
 .loginText {
     font-family: 'Contrail One', cursive;
@@ -239,6 +241,6 @@ a {
     justify-content: center;
     padding: 10px;
 
-    margin-top: 28vh;
+    margin-top: 24vh;
     background-color: rgba(253, 154, 100, 0.6);
 }
