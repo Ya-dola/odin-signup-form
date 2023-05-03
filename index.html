@@ -38,29 +38,35 @@
                 <div class="formHeading">Let's GO GET IT!</div>
                 <div class="formBody">
                     <div class="inputDiv">
-                        <input type="text" name="first-name" id="first-name" placeholder=" " required>
+                        <input type="text" name="first-name" id="first-name" required>
                         <label for="first-name">First Name</label>
+                        <div class="inputError" id="first-name-error">Please Type First Name</div>
                     </div>
                     <div class="inputDiv">
-                        <input type="text" name="last-name" id="last-name" placeholder=" " required>
+                        <input type="text" name="last-name" id="last-name" required>
                         <label for="last-name">Last Name</label>
+                        <div class="inputError" id="last-name-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="email" name="email" id="email" placeholder=" " required>
+                        <input type="email" name="email" id="email" required>
                         <label for="email">Email</label>
+                        <div class="inputError" id="email-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="number" name="phone-num" id="phone-num" placeholder=" "
+                        <input type="number" name="phone-num" id="phone-num"
                                minlength="9" required>
                         <label for="phone-num">Phone Number</label>
+                        <div class="inputError" id="phone-num-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="password" name="pass" id="pass" placeholder=" " required>
+                        <input type="password" name="pass" id="pass" required>
                         <label for="pass">Password</label>
+                        <div class="inputError" id="pass-error"></div>
                     </div>
                     <div class="inputDiv">
-                        <input type="password" name="conf-pass" id="conf-pass" placeholder=" " required>
+                        <input type="password" name="conf-pass" id="conf-pass" required>
                         <label for="conf-pass">Confirm Password</label>
+                        <div class="inputError" id="conf-pass-error"></div>
                     </div>
                 </div>
                 <button type="submit">Create Account</button>

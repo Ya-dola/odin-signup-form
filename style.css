@@ -18,6 +18,7 @@
     --size-form-cta: 3vmin;
     --size-form-heading: 2vmax;
     --size-form-input: 1.4vmax;
+    --size-form-input-error: 0.7vmax;
     --size-form-label: 1.025vmax;
     --size-form-login-txt: 1.35vmax;
     --size-form-login-a: 2vmax;
@@ -179,13 +180,14 @@ a {
 .formBody {
     display: flex;
     flex-flow: row wrap;
-    gap: 2vw;
+    gap: 1.6vmax 2vmax;
     padding: 2vh 0;
 }
 
 .inputDiv {
     position: relative;
     width: 40%;
+    margin-bottom: 1.4vmax;
 }
 
 .inputDiv input {
@@ -209,19 +211,19 @@ a {
     transition: all 0.3s ease-in-out;
 }
 
-/*To Show Invalid Inputs*/
-.inputDiv input:not(:placeholder-shown) ~ label {
-    top: -1.6vmax;
-    left: 0;
-    color: var(--error-txt);
-}
-
-/*Lower CSS Takes Priority over Top CSS to allow for valid inputs*/
 .inputDiv input:focus ~ label,
 .inputDiv input:valid ~ label {
     top: -1.6vmax;
     left: 0;
     color: var(--dark-txt);
+}
+
+.inputDiv .inputError {
+    position: absolute;
+    padding: 0.3vmax 0;
+
+    color: var(--error-txt);
+    font-size: var(--size-form-input-error);
 }
 
 .loginText {
@@ -241,6 +243,6 @@ a {
     justify-content: center;
     padding: 10px;
 
-    margin-top: 24vh;
+    margin-top: 16vh;
     background-color: rgba(253, 154, 100, 0.6);
 }
